@@ -10,13 +10,13 @@ import java.util.List;
 @org.springframework.stereotype.Service
 
 @Data
-public class Service {
+public class TodoService {
 
-    private final Repo repo;
+    private final TodoRepo todoRepo;
 
 
 
     public List<Todo> getAllTodos(){
-        return repo.getAllTodos();
+        return todoRepo.getAllTodos();
     }
 }
