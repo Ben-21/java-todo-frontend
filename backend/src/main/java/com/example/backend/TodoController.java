@@ -17,18 +17,34 @@ public class TodoController {
 
 
     @GetMapping
-    public List<Todo> todos (){
+    public List<Todo> getAllTodos (){
         return todoService.getAllTodos();
     }
 
 
     @PostMapping
-    public List<Todo> createTodo(@RequestBody Todo todo){
+    public void createTodo(@RequestBody Todo todo){
+        todoService.createTodo(todo.getStatus(), todo.getDescription());
+    }
+
+    @GetMapping("{id}")
+    public Todo getTodo (@PathVariable String id){
+        return todoService.getTodoById(id);
+    }
 
 
 
+  @PutMapping("{id}")
+    public void updateTodo (@PathVariable String id, @RequestBody Todo todo){
+        todoService.updateTodoById(id, todo);
+    }
 
-        return todoService.getAllTodos();
+
+    @DeleteMapping("{id}")
+    public void deleteTodo (@PathVariable String id){
+        todoService.deleteTodoById(id);
+
+
     }
 
 
