@@ -2,7 +2,7 @@ package com.example.backend;
 
 
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
+
 
 import java.util.List;
 
@@ -11,7 +11,6 @@ import java.util.List;
 
 @Data
 public class Service {
-
 
     private final Repo repo;
 

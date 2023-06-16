@@ -15,7 +15,9 @@ import java.util.List;
 public class Controller {
 
 
-    private Service service;
+    private final Service service;
+
+
 
     @GetMapping
     public List<Todo> todos (){
