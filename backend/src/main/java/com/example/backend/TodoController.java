@@ -24,7 +24,7 @@ public class TodoController {
 
     @PostMapping
     public void createTodo(@RequestBody Todo todo){
-        todoService.createTodo(todo.getStatus(), todo.getDescription());
+        todoService.createTodo(todo);
     }
 
     @GetMapping("{id}")

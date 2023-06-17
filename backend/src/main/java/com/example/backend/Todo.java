@@ -1,28 +1,40 @@
 package com.example.backend;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.util.Objects;
-import java.util.UUID;
+
 
 public class Todo {
-
+//        private RandomGenerators randomGenerators;
     private String id;
     private String status;
     private String description;
 
-
-    public Todo(String status, String description) {
-        this.id = UUID.randomUUID().toString().substring(0, 4);
+    public Todo(String id, String status, String description) {
+        this.id = id;
         this.status = status;
         this.description = description;
     }
+
+//    public Todo(String status, String description) {
+//        randomGenerators = new RandomGenerators();
+//        this.id = randomGenerators.getRandomId();
+//        this.status = status;
+//        this.description = description;
+//    }
 
 
     public String getId() {
         return id;
     }
+
     public String getStatus() {
         return status;
     }
+
     public String getDescription() {
         return description;
     }
@@ -39,6 +51,7 @@ public class Todo {
     public void setDescription(String description) {
         this.description = description;
     }
+
 
     @Override
     public String toString() {

@@ -11,17 +11,18 @@ import static org.mockito.Mockito.*;
 
 public class TodoServiceTest {
 
+
    TodoRepo todoRepo = mock(TodoRepo.class);
-   TodoService todoService = new TodoService(todoRepo);
+   RandomGenerators randomGenerators = mock(RandomGenerators.class);
+   TodoService todoService = new TodoService(todoRepo, randomGenerators);
 
 
     @Test
     void returnAllTodos() {
         //GIVEN
-        Todo todo1 = new Todo("OPEN", "Do the dishes");
-        Todo todo2 = new Todo("OPEN", "Do the floor cleaning");
+        Todo todo1 = new Todo("1", "OPEN", "Do the dishes");
+        Todo todo2 = new Todo("2","OPEN", "Do the floor cleaning");
         List<Todo> expectedList = new ArrayList<>(List.of(todo1, todo2));
-
 
         //WHEN
         when(todoRepo.getAllTodos()).thenReturn(expectedList);
@@ -31,6 +32,9 @@ public class TodoServiceTest {
         Assertions.assertEquals(expectedList, actualList);
         verify(todoRepo).getAllTodos();
     }
+
+
+
 
 
 }

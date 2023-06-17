@@ -26,10 +26,8 @@ public class  TodoRepo {
         return todos;
     }
 
-    public void createTodo(String title, String description){
-        todos.add(new Todo (title, description));
-
-
+    public void createTodo(Todo newTodo){
+        todos.add(newTodo);
     }
 
     public Todo getTodoById(String id){

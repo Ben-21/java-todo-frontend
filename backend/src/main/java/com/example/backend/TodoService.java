@@ -15,15 +15,16 @@ import java.util.List;
 public class TodoService {
 
     private final TodoRepo todoRepo;
-
+    private  final RandomGenerators randomGenerators;
 
 
     public List<Todo> getAllTodos(){
         return todoRepo.getAllTodos();
     }
 
-    public  void createTodo(String status, String description){
-        todoRepo.createTodo(status, description);
+    public  void createTodo(Todo newTodo){
+        newTodo.setId(randomGenerators.getRandomId());
+        todoRepo.createTodo(newTodo);
     }
 
 
