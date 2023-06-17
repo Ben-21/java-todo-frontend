@@ -22,8 +22,8 @@ public class TodoService {
         return todoRepo.getAllTodos();
     }
 
-    public  void createTodo(String title, String description){
-        todoRepo.createTodo(title, description);
+    public  void createTodo(String status, String description){
+        todoRepo.createTodo(status, description);
     }
 
 
