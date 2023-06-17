@@ -8,7 +8,7 @@ import java.util.Objects;
 
 
 public class Todo {
-//        private RandomGenerators randomGenerators;
+
     private String id;
     private String status;
     private String description;
@@ -19,12 +19,7 @@ public class Todo {
         this.description = description;
     }
 
-//    public Todo(String status, String description) {
-//        randomGenerators = new RandomGenerators();
-//        this.id = randomGenerators.getRandomId();
-//        this.status = status;
-//        this.description = description;
-//    }
+
 
 
     public String getId() {
