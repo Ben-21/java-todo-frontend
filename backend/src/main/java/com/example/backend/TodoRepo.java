@@ -26,7 +26,7 @@ public class  TodoRepo {
         return todos;
     }
 
-    public Todo createTodo(Todo newTodo){
+    public Todo addTodo(Todo newTodo){
         todos.add(newTodo);
         return newTodo;
     }

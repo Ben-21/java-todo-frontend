@@ -16,16 +16,16 @@ public class TodoService {
 
     private final TodoRepo todoRepo;
     private  final RandomGenerators randomGenerators;
-    private String test;
+
 
 
     public List<Todo> getAllTodos(){
         return todoRepo.getAllTodos();
     }
 
-    public  Todo createTodo(Todo newTodo){
+    public  Todo addTodo(Todo newTodo){
         newTodo.setId(randomGenerators.getRandomId());
-        todoRepo.createTodo(newTodo);
+        todoRepo.addTodo(newTodo);
         return newTodo;
     }
 

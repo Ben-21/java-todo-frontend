@@ -1,8 +1,8 @@
 package com.example.backend;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
 
@@ -15,6 +15,10 @@ public class Todo {
 
     public Todo(String id, String status, String description) {
         this.id = id;
+        this.status = status;
+        this.description = description;
+    }public Todo(String status, String description) {
+
         this.status = status;
         this.description = description;
     }

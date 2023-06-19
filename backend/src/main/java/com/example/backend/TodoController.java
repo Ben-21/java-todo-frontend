@@ -23,8 +23,8 @@ public class TodoController {
 
 
     @PostMapping
-    public void createTodo(@RequestBody Todo todo){
-        todoService.createTodo(todo);
+    public void addTodo(@RequestBody Todo todo){
+        todoService.addTodo(todo);
     }
 
     @GetMapping("{id}")
